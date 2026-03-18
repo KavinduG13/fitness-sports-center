@@ -31,13 +31,13 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4">
               <button
                 onClick={() => scrollTo('#contact')}
-                className="bg-primary hover:bg-primary-dark text-black font-bold text-sm px-8 py-3.5 tracking-widest uppercase transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-primary/30"
+                className="bg-primary hover:bg-primary-dark text-black rounded-md font-bold text-sm px-8 py-3.5 tracking-widest uppercase transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-primary/30"
               >
                 Get Started
               </button>
               <button
                 onClick={() => scrollTo('#about')}
-                className="border border-primary/60 hover:border-primary text-white hover:text-primary text-sm font-semibold px-8 py-3.5 tracking-widest uppercase transition-all duration-200 hover:scale-105"
+                className="border border-primary/60 hover:border-primary rounded-md text-white hover:text-primary text-sm font-semibold px-8 py-3.5 tracking-widest uppercase transition-all duration-200 hover:scale-105"
               >
                 Learn More
               </button>
