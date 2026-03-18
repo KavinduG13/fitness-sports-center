@@ -86,17 +86,16 @@ const Plans = () => {
           {plans.map((plan, i) => (
             <div
               key={plan.name}
-              className={`section-reveal relative rounded flex flex-col transition-all duration-300 hover:scale-[1.02] ${
-                plan.popular
-                  ? 'border-2 border-primary bg-[#1a1500] shadow-xl shadow-primary/20'
-                  : 'border border-dark-border bg-[#141414] hover:border-primary/40'
-              }`}
+              className={`section-reveal relative rounded-md flex flex-col transition-all duration-300 hover:scale-[1.02] ${plan.popular
+                ? 'border-2 border-primary bg-[#1a1500] shadow-xl shadow-primary/20'
+                : 'border border-dark-border bg-[#141414] hover:border-primary/40'
+                }`}
               style={{ transitionDelay: `${i * 150}ms` }}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="bg-primary text-black text-xs font-bold px-4 py-1.5 tracking-widest uppercase">
-                    MOST POPULAR
+                    RECOMMENDED
                   </span>
                 </div>
               )}
@@ -125,11 +124,10 @@ const Plans = () => {
 
                 {/* CTA Button */}
                 <button
-                  className={`w-full py-3 font-bold text-sm tracking-widest uppercase transition-all duration-200 hover:scale-105 ${
-                    plan.popular
-                      ? 'bg-primary hover:bg-primary-dark text-black'
-                      : 'border border-primary/60 hover:border-primary text-white hover:text-primary'
-                  }`}
+                  className={`w-full py-3 font-bold text-sm tracking-widest rounded-md uppercase transition-all duration-200 hover:scale-105 ${plan.popular
+                    ? 'bg-primary hover:bg-primary-dark text-black'
+                    : 'border border-primary/60 hover:border-primary text-white hover:text-primary'
+                    }`}
                   onClick={() => {
                     document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
                   }}

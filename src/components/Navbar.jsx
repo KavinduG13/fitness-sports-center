@@ -26,9 +26,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-[#0a0a0a]/95 backdrop-blur-md shadow-lg shadow-black/50' : 'bg-[#0a0a0a]/80 backdrop-blur-sm'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0a0a0a]/95 backdrop-blur-md shadow-lg shadow-black/50' : 'bg-[#0a0a0a]/80 backdrop-blur-sm'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -58,7 +57,7 @@ const Navbar = () => {
             ))}
             <button
               onClick={() => handleNavClick('#contact')}
-              className="bg-primary hover:bg-primary-dark text-black font-bold text-sm px-6 py-2 tracking-widest uppercase transition-all duration-200 hover:scale-105"
+              className="bg-primary hover:bg-primary-dark text-black rounded-md font-bold text-sm px-6 py-2 tracking-widest uppercase transition-all duration-200 hover:scale-105"
             >
               JOIN NOW
             </button>
@@ -78,9 +77,8 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
-            menuOpen ? 'max-h-96 pb-6' : 'max-h-0'
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? 'max-h-96 pb-6' : 'max-h-0'
+            }`}
         >
           <div className="flex flex-col gap-4 pt-4 border-t border-dark-border">
             {navLinks.map((link) => (
