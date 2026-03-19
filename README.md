@@ -12,7 +12,7 @@ A responsive promotional website for **Fitness Sports Center**, a modern gym bra
 | Build Tool | Vite |
 | Styling | Tailwind CSS v3 |
 | Fonts | Bebas Neue, Inter (Google Fonts) |
-| Deployment | _(add live link below)_ |
+| Deployment | [Vercel](https://fitness-sports-center-six.vercel.app/) |
 
 ---
 
@@ -61,7 +61,7 @@ npm run preview
 
 ## Live Demo
 
-🔗 [Live Link](#) _(update after deployment)_
+🔗 [Live Link](https://fitness-sports-center-six.vercel.app/)
 
 ---
 
@@ -100,4 +100,4 @@ fsc-frontend/
 
 ## Figma Design
 
-🎨 [Figma Design Link](#) _(add your Figma link here)_
+🎨 [Figma Design Link](https://www.figma.com/design/VNJGkzLK6JY30BzjiV7mBs/Koncepthive---Gym_WebApp?node-id=0-1&p=f&t=zBqQyvfC3GKyVc8H-0)
