@@ -59,18 +59,17 @@ const Contact = () => {
   }
 
   const inputClass = (field) =>
-    `w-full bg-[#1e1e1e] border ${
-      errors[field] ? 'border-red-500' : 'border-dark-border focus:border-primary'
-    } text-white placeholder-gray-600 px-4 py-3.5 rounded text-sm outline-none transition-colors duration-200`
+    `w-full bg-white dark:bg-[#1e1e1e] border ${errors[field] ? 'border-red-500' : 'border-gray-300 dark:border-dark-border focus:border-primary'
+    } text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-600 px-4 py-3.5 rounded text-sm outline-none transition-colors duration-200`
 
   return (
-    <section id="contact" ref={sectionRef} className="bg-[#141414] py-20 md:py-28">
+    <section id="contact" ref={sectionRef} className="bg-gray-50 dark:bg-[#141414] py-20 md:py-28 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14 section-reveal">
           <div className="gold-accent-bar centered mb-4" />
-          <h2 className="font-heading text-white text-5xl md:text-6xl mb-4">GET IN TOUCH</h2>
-          <p className="text-gray-400 text-base md:text-lg">
+          <h2 className="font-heading text-gray-900 dark:text-white text-5xl md:text-6xl mb-4">GET IN TOUCH</h2>
+          <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg">
             Ready to start your fitness journey? Contact us today
           </p>
         </div>
@@ -78,19 +77,19 @@ const Contact = () => {
         {/* Form */}
         <div className="max-w-lg mx-auto section-reveal">
           {submitted ? (
-            <div className="text-center py-16 px-8 bg-[#1e1e1e] border border-green-500/40 rounded">
-              <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center py-16 px-8 bg-white dark:bg-[#1e1e1e] border border-green-500/40 rounded shadow-sm dark:shadow-none">
+              <div className="w-16 h-16 rounded-full bg-green-50 dark:bg-green-500/20 flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-green-500 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="font-heading text-white text-3xl mb-3">MESSAGE SENT!</h3>
-              <p className="text-gray-400 mb-8">
+              <h3 className="font-heading text-gray-900 dark:text-white text-3xl mb-3">MESSAGE SENT!</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-8">
                 Thank you for reaching out. Our team will get back to you within 24 hours.
               </p>
               <button
                 onClick={() => setSubmitted(false)}
-                className="border border-primary/60 hover:border-primary text-primary text-sm font-semibold px-8 py-3 tracking-widest uppercase transition-all hover:scale-105"
+                className="border border-primary/60 rounded-md hover:border-primary text-primary text-sm font-semibold px-8 py-3 tracking-widest uppercase transition-all hover:scale-105"
               >
                 Send Another
               </button>
@@ -99,7 +98,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-5" noValidate>
               {/* Full Name */}
               <div>
-                <label className="block text-white text-sm font-medium mb-2">Full Name</label>
+                <label className="block text-gray-800 dark:text-white text-sm font-medium mb-2">Full Name</label>
                 <input
                   type="text"
                   name="name"
@@ -114,7 +113,7 @@ const Contact = () => {
 
               {/* Email */}
               <div>
-                <label className="block text-white text-sm font-medium mb-2">Email Address</label>
+                <label className="block text-gray-800 dark:text-white text-sm font-medium mb-2">Email Address</label>
                 <input
                   type="email"
                   name="email"
@@ -129,7 +128,7 @@ const Contact = () => {
 
               {/* Message */}
               <div>
-                <label className="block text-white text-sm font-medium mb-2">Message</label>
+                <label className="block text-gray-800 dark:text-white text-sm font-medium mb-2">Message</label>
                 <textarea
                   name="message"
                   id="contact-message"
@@ -147,7 +146,7 @@ const Contact = () => {
                 type="submit"
                 disabled={loading}
                 id="contact-submit"
-                className="w-full bg-primary hover:bg-primary-dark disabled:opacity-70 text-black font-bold text-sm py-4 tracking-widest uppercase transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2"
+                className="w-full bg-primary hover:bg-primary-dark rounded-md disabled:opacity-70 text-black font-bold text-sm py-4 tracking-widest uppercase transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2"
               >
                 {loading ? (
                   <>

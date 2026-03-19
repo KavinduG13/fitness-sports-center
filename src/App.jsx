@@ -29,7 +29,7 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] font-body">
+    <div className="min-h-screen font-body text-gray-900 dark:text-white transition-colors duration-300 dark:bg-[#0a0a0a]">
       <Navbar />
       <main>
         <Hero />
