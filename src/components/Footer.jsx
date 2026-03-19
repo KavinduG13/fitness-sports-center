@@ -52,7 +52,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-[#0a0a0a] border-t-2 border-primary/70">
+    <footer className="bg-white dark:bg-[#0a0a0a] border-t border-gray-200 dark:border-t-2 dark:border-primary/70 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Col 1: Brand */}
@@ -64,7 +64,7 @@ const Footer = () => {
                 className="h-12 w-12 rounded-full object-cover border border-primary/40"
               />
               <div>
-                <p className="font-heading text-white text-lg tracking-widest">FITNESS SPORTS CENTER</p>
+                <p className="font-heading text-gray-900 dark:text-white text-lg tracking-widest">FITNESS SPORTS CENTER</p>
                 <p className="text-primary text-[10px] tracking-[0.3em] font-semibold">EST. 2023</p>
               </div>
             </div>
@@ -76,13 +76,13 @@ const Footer = () => {
 
           {/* Col 2: Quick Links */}
           <div>
-            <h4 className="font-heading text-white text-xl tracking-wider mb-6">QUICK LINKS</h4>
+            <h4 className="font-heading text-gray-900 dark:text-white text-xl tracking-wider mb-6">QUICK LINKS</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <button
                     onClick={() => scrollTo(link.href)}
-                    className="text-gray-500 hover:text-primary text-sm transition-colors duration-200 uppercase tracking-wider"
+                    className="text-gray-600 dark:text-gray-500 hover:text-primary text-sm transition-colors duration-200 uppercase tracking-wider"
                   >
                     {link.label}
                   </button>
@@ -93,7 +93,7 @@ const Footer = () => {
 
           {/* Col 3: Follow Us */}
           <div>
-            <h4 className="font-heading text-white text-xl tracking-wider mb-6">FOLLOW US</h4>
+            <h4 className="font-heading text-gray-900 dark:text-white text-xl tracking-wider mb-6">FOLLOW US</h4>
             <div className="flex gap-3 flex-wrap">
               {socialLinks.map((social) => (
                 <a
@@ -102,7 +102,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="w-10 h-10 flex items-center justify-center border border-dark-border hover:border-primary text-gray-500 hover:text-primary rounded transition-all duration-200 hover:scale-110"
+                  className="w-10 h-10 flex items-center justify-center border border-gray-300 dark:border-dark-border hover:border-primary text-gray-600 dark:text-gray-500 hover:text-primary rounded transition-all duration-200 hover:scale-110"
                 >
                   {social.icon}
                 </a>
@@ -112,7 +112,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-dark-border mt-10 pt-6 text-center">
+        <div className="border-t border-gray-200 dark:border-dark-border mt-10 pt-6 text-center">
           <p className="text-gray-600 text-sm">
             &copy; {new Date().getFullYear()} Fitness Sports Center. All rights reserved.
           </p>
