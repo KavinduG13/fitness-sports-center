@@ -70,13 +70,13 @@ const Plans = () => {
   }, [])
 
   return (
-    <section id="plans" ref={sectionRef} className="bg-[#0a0a0a] py-20 md:py-28">
+    <section id="plans" ref={sectionRef} className="bg-white dark:bg-[#0a0a0a] py-20 md:py-28 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14 section-reveal">
           <div className="gold-accent-bar centered mb-4" />
-          <h2 className="font-heading text-white text-5xl md:text-6xl mb-4">MEMBERSHIP PLANS</h2>
-          <p className="text-gray-400 text-base md:text-lg">
+          <h2 className="font-heading text-gray-900 dark:text-white text-5xl md:text-6xl mb-4">MEMBERSHIP PLANS</h2>
+          <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg">
             Choose the perfect plan to start your transformation journey
           </p>
         </div>
@@ -86,24 +86,23 @@ const Plans = () => {
           {plans.map((plan, i) => (
             <div
               key={plan.name}
-              className={`section-reveal relative rounded flex flex-col transition-all duration-300 hover:scale-[1.02] ${
-                plan.popular
-                  ? 'border-2 border-primary bg-[#1a1500] shadow-xl shadow-primary/20'
-                  : 'border border-dark-border bg-[#141414] hover:border-primary/40'
-              }`}
+              className={`section-reveal relative rounded-md flex flex-col transition-all duration-300 hover:scale-[1.02] ${plan.popular
+                ? 'border-2 border-primary bg-yellow-50/50 dark:bg-[#1a1500] shadow-xl shadow-primary/20'
+                : 'border border-gray-200 dark:border-dark-border bg-white dark:bg-[#141414] hover:border-primary/40'
+                }`}
               style={{ transitionDelay: `${i * 150}ms` }}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="bg-primary text-black text-xs font-bold px-4 py-1.5 tracking-widest uppercase">
-                    MOST POPULAR
+                    RECOMMENDED
                   </span>
                 </div>
               )}
 
               <div className="p-8 flex flex-col flex-1">
                 {/* Plan Name */}
-                <h3 className={`font-heading text-2xl mb-4 tracking-wider ${plan.popular ? 'text-primary' : 'text-white'}`}>
+                <h3 className={`font-heading text-2xl mb-4 tracking-wider ${plan.popular ? 'text-primary' : 'text-gray-900 dark:text-white'}`}>
                   {plan.name}
                 </h3>
 
@@ -118,18 +117,17 @@ const Plans = () => {
                   {plan.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-3">
                       <CheckIcon />
-                      <span className="text-gray-300 text-sm">{feature}</span>
+                      <span className="text-gray-700 dark:text-gray-300 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 {/* CTA Button */}
                 <button
-                  className={`w-full py-3 font-bold text-sm tracking-widest uppercase transition-all duration-200 hover:scale-105 ${
-                    plan.popular
-                      ? 'bg-primary hover:bg-primary-dark text-black'
-                      : 'border border-primary/60 hover:border-primary text-white hover:text-primary'
-                  }`}
+                  className={`w-full py-3 font-bold text-sm tracking-widest rounded-md uppercase transition-all duration-200 hover:scale-105 ${plan.popular
+                    ? 'bg-primary hover:bg-primary-dark text-black'
+                    : 'border border-primary/60 hover:border-primary text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary'
+                    }`}
                   onClick={() => {
                     document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
                   }}
